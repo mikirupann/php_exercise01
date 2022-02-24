@@ -7,6 +7,6 @@ $foods = [
 ];
 echo "私は<br>";
 foreach ($foods as $key => $value) {
-    echo "{$key}は{$value}<br>";
+    echo "{$key}に{$value}<br>";
 }
 echo "を食べます。";
