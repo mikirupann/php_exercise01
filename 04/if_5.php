@@ -1,8 +1,13 @@
 <?php
 
-$num = 10;
+$num = 0;
 
 $flg = true;
+
+if ($num <= 1) {
+    $flg = false;
+}
+
 for ($i = 2; $i < $num; $i++) {
     if ($num % $i == 0) {
         $flg = false;
