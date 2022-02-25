@@ -1,6 +1,10 @@
 <?php
+$num = 0;
 
-$num = 10;
+if ($num <= 1) {
+    echo "{$num}は素数ではありません。";
+    exit;
+}
 
 $flg = true;
 for ($i = 2; $i < $num; $i++) {
