@@ -4,7 +4,7 @@ $age = '';
 $err_age = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $age = $_POST['number'];
+    $age = $_POST['age'];
     if (empty($age)) {
         $err_age = '※年齢を入れてください';
     } elseif ($age) {
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="POST">
         <div>
             <label for="age">年齢</label><br>
-            <input type="number" name="number">
+            <input type="number" name="age" id="age">
         </div>
         <div>
             <input type="submit" value="送信">
