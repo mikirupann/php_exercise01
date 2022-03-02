@@ -4,24 +4,30 @@ $num1 = $_GET['num1'];
 $num2 = $_GET['num2'];
 $operator = $_GET['operator'];
 
+function inline($fao, $num1, $num2, $result)
+{
 
-
-if ($operator == 'addition') {
-    $total = $num1 + $num2;
-    $add = '+';
-} elseif ($operator == 'subtraction') {
-    $total = $num1 - $num2;
-    $add = '-';
-} elseif ($operator == 'multiplication') {
-    $total = $num1 * $num2;
-    $add = '*';
-} elseif ($operator == 'division') {
-    $total = $num1 / $num2;
-    $add = '/';
-} else {
-    $total = "正しい演算子を指定して下さい";
+    return "$num1 $fao $num2 = $result";
 }
 
-$total = "{$num1} {$add} {$num2} = $total";
+if ($operator == 'addition') {
+    $result = $num1 + $num2;
+    $fao = '+';
+    $message = inline($fao, $num1, $num2, $result);
+} elseif ($operator == 'subtraction') {
+    $result = $num1 - $num2;
+    $fao = '-';
+    $message = inline($fao, $num1, $num2, $result);
+} elseif ($operator == 'multiplication') {
+    $result = $num1 * $num2;
+    $fao = '*';
+    $message = inline($fao, $num1, $num2, $result);
+} elseif ($operator == 'division') {
+    $result = $num1 / $num2;
+    $fao = '/';
+    $message = inline($fao, $num1, $num2, $result);
+} else {
+    $message = "正しい演算子を指定して下さい";
+}
 
-echo $total;
+echo $message;
