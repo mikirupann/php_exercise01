@@ -27,7 +27,12 @@ if ($operator == 'addition') {
     $fao = '/';
     $message = inline($fao, $num1, $num2, $result);
 } else {
-    $message = "正しい演算子を指定して下さい";
+    $error_message = "正しい演算子を指定して下さい";
 }
 
-echo $message;
+if (empty($error_message)) {
+    echo $message;
+} else { 
+    echo $error_message;
+}
+
