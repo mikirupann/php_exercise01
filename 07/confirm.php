@@ -8,7 +8,7 @@ $prices = [
     'ネックレス' => 9000,
     'ピアス' => 10000
 ];
-$maney = $prices[$_GET['item_key']];
+$money = $prices[$_GET['item_key']];
 
 ?>
 
@@ -24,7 +24,7 @@ $maney = $prices[$_GET['item_key']];
 
 <body>
     <h2>ご注文ありがとうございます</h2>
-    <h2>お支払い合計は、<?= $maney ?>円です</h2>
+    <h2>お支払い合計は、<?= $money ?>円です</h2>
     <a href="form2_5.php">戻る</a>
 </body>
 
