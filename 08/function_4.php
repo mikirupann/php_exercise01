@@ -7,11 +7,9 @@ function check_temperature($body_temperature)
     // 37度以上の場合はfalse
     if ($body_temperature < 37) {
         return true;
-    } elseif ($body_temperature >= 37) {
+    } else {
         return false;
     }
-    
-    
 }
 
 function create_message($body_temperature)
@@ -19,14 +17,11 @@ function create_message($body_temperature)
     // コードを追記
     // check_temperature関数を呼び出す
     // check_temperature関数の結果によって文字列を変更し、関数の戻り値として設定
-    $num = check_temperature($body_temperature);
-    if ($num == true) {
-        $mag = "あなたは平熱なので、問題なく参加できます";
-    } elseif ($num == false) {
-        $mag = "あなたは発熱なので、参加できません";
+    if (check_temperature($body_temperature) == true) {
+        return "あなたは平熱なので、問題なく参加できます";
+    } elseif (check_temperature($body_temperature) == false) {
+        return "あなたは発熱なので、参加できません";
     }
-    return $mag;
-
 }
 
 $msg = '';

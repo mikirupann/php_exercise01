@@ -22,15 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <form action="" method="post">
-        <?php if ($date) : ?>
-            <h1><?= $date ?></h1>
-            <a href="">戻る</a>
-        <?php elseif (empty($date)) : ?>
-            <h2>本日の日付、曜日を確認しますか？</h2>
+    <?php if ($date) : ?>
+        <h1><?= $date ?></h1>
+        <a href="">戻る</a>
+    <?php endif; ?>
+    <?php if (empty($date)) : ?>
+        <h2>本日の日付、曜日を確認しますか？</h2>
+        <form action="" method="post">
             <input type="submit" value="はい">
         <?php endif; ?>
-    </form>
+        </form>
 </body>
 
 </html>
