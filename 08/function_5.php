@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $week = ['日', '月', '火', '水', '木', '金', '土'];
     $day = date('w');
     $date = '今日は、' . date('Y年m月d日') . $week[$day] . '曜日です';
-
 }
 ?>
 <!DOCTYPE html>
