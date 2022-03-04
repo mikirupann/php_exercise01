@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>本日の日付、曜日を確認しますか？</h2>
         <form action="" method="post">
             <input type="submit" value="はい">
-        <?php endif; ?>
         </form>
+    <?php endif; ?>
 </body>
 
 </html>
